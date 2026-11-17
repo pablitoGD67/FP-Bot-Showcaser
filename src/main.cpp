@@ -51,14 +51,14 @@ static void refreshLabels() {
 class $modify(FPGameLayer, GJBaseGameLayer) {
     void handleButton(bool down, int button, bool isPlayer1) {
         if (g.mode == BotState::Recording && !g.injecting) {
-            g.clicks.push_back({m_gameState.m_currentProgress, down, button, isPlayer1, 0});
+            g.clicks.push_back({static_cast<int>(m_gameState.m_currentProgress), down, button, isPlayer1, 0});
         }
         GJBaseGameLayer::handleButton(down, button, isPlayer1);
     }
 
     void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         if (g.mode == BotState::Playing) {
-            int now = m_gameState.m_currentProgress;
+            int now = static_cast<int>(m_gameState.m_currentProgress);
             while (g.next < g.clicks.size() && g.clicks[g.next].frame <= now) {
                 auto& c = g.clicks[g.next++];
                 g.injecting = true;
