@@ -1,0 +1,11 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"android": "2.2081"
+	},
+	"id": "pablo.fp-bot-showcaser",
+	"name": "FP Bot Showcaser",
+	"version": "v0.1.0",
+	"developer": "pablo",
+	"description": "Graba inputs para showcases y cuenta clicks frame perfect (60/90/120/240/360 fps)."
+}
