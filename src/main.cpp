@@ -56,7 +56,7 @@ class $modify(FPGameLayer, GJBaseGameLayer) {
         GJBaseGameLayer::handleButton(down, button, isPlayer1);
     }
 
-    void processCommands(float dt) {
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         if (g.mode == BotState::Playing) {
             int now = m_gameState.m_currentProgress;
             while (g.next < g.clicks.size() && g.clicks[g.next].frame <= now) {
@@ -67,7 +67,7 @@ class $modify(FPGameLayer, GJBaseGameLayer) {
             }
             refreshLabels();
         }
-        GJBaseGameLayer::processCommands(dt);
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
     }
 };
 
