@@ -24,3 +24,46 @@
 			"default": false
 		},
 		"speedhack": {
+			"type": "float",
+			"name": "Speedhack",
+			"description": "Velocidad del juego dentro del nivel (1.0 = normal, 0.5 = camara lenta).",
+			"default": 1.0,
+			"min": 0.05,
+			"max": 10.0
+		},
+		"hitbox-trail": {
+			"type": "bool",
+			"name": "Hitbox trail",
+			"description": "Dibuja la hitbox en cada paso de fisica, con pasos intermedios, sin depender de tus fps.",
+			"default": false
+		},
+		"hitbox-tps": {
+			"type": "int",
+			"name": "Hitbox trail: fps emulados",
+			"description": "Pasos por segundo que se dibujan en el trail (maximo 480). Si tu TPS es menor, se interpolan.",
+			"default": 480,
+			"min": 60,
+			"max": 480
+		},
+		"hitbox-trail-seconds": {
+			"type": "float",
+			"name": "Hitbox trail: segundos",
+			"description": "Cuanto tiempo se queda el trail en pantalla.",
+			"default": 1.0,
+			"min": 0.2,
+			"max": 3.0
+		},
+		"show-trajectory": {
+			"type": "bool",
+			"name": "Mostrar trayectoria",
+			"description": "Dibuja la ruta del replay (se calcula al tocar Analizar).",
+			"default": false
+		},
+		"fp-notification": {
+			"type": "bool",
+			"name": "Notificacion de FP",
+			"description": "Muestra 'FP detectado a X fps' arriba a la derecha cuando un click del replay es frame perfect.",
+			"default": true
+		}
+	}
+}
