@@ -5,7 +5,22 @@
 	},
 	"id": "pablo.fp-bot-showcaser",
 	"name": "FP Bot Showcaser",
-	"version": "0.1.0",
+	"version": "v0.3.0",
 	"developer": "pablo",
-	"description": "Graba inputs para showcases y cuenta clicks frame perfect (60/90/120/240/360 fps)."
-}
+	"description": "Graba/importa inputs para showcases, detecta clicks frame perfect y muestra hitboxes, trail y trayectoria.",
+	"settings": {
+		"tps": {
+			"type": "int",
+			"name": "TPS de la grabacion",
+			"description": "Ticks de fisica por segundo con los que juegas/grabas (240 en GD 2.2 vanilla).",
+			"default": 240,
+			"min": 60,
+			"max": 1000
+		},
+		"manual-buttons": {
+			"type": "bool",
+			"name": "Botones manuales de FP",
+			"description": "Muestra en el nivel los botones para marcar un click como FP a mano.",
+			"default": false
+		},
+		"speedhack": {
